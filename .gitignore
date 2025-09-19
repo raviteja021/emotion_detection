@@ -1,25 +1,183 @@
-# Logs
-logs
-*.log
+# ==============================================================================
+# EMOTION DETECTION PROJECT - COMPREHENSIVE GITIGNORE
+# ==============================================================================
+
+# ==============================================================================
+# FRONTEND (Node.js/React/Vite)
+# ==============================================================================
+
+# Dependencies
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Build outputs
+dist/
+dist-ssr/
+build/
 *.local
 
-# Editor directories and files
+# Logs
+logs/
+*.log
+
+# ==============================================================================
+# PYTHON/BACKEND
+# ==============================================================================
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ==============================================================================
+# AI/ML SPECIFIC
+# ==============================================================================
+
+# Large AI model files (comment out if you want to include them)
+# *.onnx
+# *.caffemodel
+# *.prototxt
+# *.h5
+# *.pkl
+# *.pth
+# *.pt
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+
+# ==============================================================================
+# CAPTURED DATA & TEMPORARY FILES
+# ==============================================================================
+
+# Captured photos and videos (keep metadata but not images for privacy)
+demo/captures/*.jpg
+demo/captures/*.jpeg
+demo/captures/*.png
+demo/captures/*.mp4
+demo/captures/*.avi
+# Keep the CSV metadata file
+!demo/captures/*.csv
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ==============================================================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
 .vscode/*
 !.vscode/extensions.json
-.idea
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.env
+
+# ==============================================================================
+# DEMO/UNUSED FILES
+# ==============================================================================
+
+# Demo git repository (if it exists)
+demo/.git/
+
+# ==============================================================================
+# MISC
+# ==============================================================================
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3

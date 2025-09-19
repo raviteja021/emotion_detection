@@ -1,0 +1,12 @@
+# Flask web framework
+Flask==3.0.0
+flask-cors==4.0.0
+
+# AI/ML dependencies
+opencv-python==4.10.0.84
+numpy==2.1.1
+onnxruntime==1.19.2
+
+# Additional utilities
+Pillow==10.4.0
+python-dotenv==1.0.1

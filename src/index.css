@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Navigation styles */
+.nav-item {
+  @apply px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/50 transition-all duration-200 flex items-center gap-2 font-medium;
+}
+
+.nav-item.active {
+  @apply bg-blue-600/20 text-blue-300 border border-blue-500/30;
+}
+
+/* Light mode navigation styles */
+:global(.light) .nav-item {
+  @apply text-slate-700 hover:text-slate-900 hover:bg-slate-100;
+}
+
+:global(.light) .nav-item.active {
+  @apply bg-blue-50 text-blue-600 border-blue-200;
+}
+
+/* Feature card styles */
+.feature-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:scale-105;
+}
+
+.feature-card:hover {
+  @apply shadow-blue-500/25;
+}
+
+/* Light mode feature cards */
+:global(.light) .feature-card {
+  @apply bg-white border-slate-200 text-slate-900 shadow-slate-200;
+}
+
+:global(.light) .feature-card:hover {
+  @apply shadow-slate-300/50 border-blue-300;
+}
+
+/* Light mode text colors */
+:global(.light) .feature-title {
+  @apply text-slate-900;
+}
+
+:global(.light) .feature-description {
+  @apply text-slate-600;
+}
+
+:global(.light) .info-card {
+  @apply bg-slate-100 border-slate-200 text-slate-900;
+}

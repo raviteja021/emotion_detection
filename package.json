@@ -7,13 +7,19 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "backend": "cd server && ..\\venv\\Scripts\\python.exe app.py",
+    "backend:test": "cd server && ..\\venv\\Scripts\\python.exe test_and_run.py",
+    "backend:install": "venv\\Scripts\\python.exe -m pip install -r server\\requirements.txt",
+    "start:all": "concurrently \"npm run backend\" \"npm run dev\"",
+    "setup": "npm install && npm run backend:install"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
@@ -21,6 +27,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.18",
+    "concurrently": "^9.2.1",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
